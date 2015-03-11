@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-01-12" view-index="0" gantt-divider-location="448" resource-divider-location="300" version="2.7" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-02-23" view-index="0" gantt-divider-location="459" resource-divider-location="300" version="2.7" locale="fr_FR">
     <description/>
-    <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="57" order="0"/>
-        <field id="tpd4" name="Date de début" width="19" order="1"/>
-        <field id="tpd5" name="Date de fin" width="23" order="2"/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="61" order="0"/>
+        <field id="tpd4" name="Date de début" width="18" order="1"/>
+        <field id="tpd5" name="Date de fin" width="19" order="2"/>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nom" width="52" order="0"/>
-        <field id="1" name="Rôle par défaut" width="47" order="1"/>
+        <field id="0" name="Nom" width="50" order="0"/>
+        <field id="1" name="Rôle par défaut" width="50" order="1"/>
     </view>
     <!-- -->
     <calendars base-id="france">
@@ -146,26 +146,66 @@
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
         <task id="0" name="Rédaction cahier des charges" color="#8cb6ce" meeting="false" start="2015-02-04" duration="17" complete="0" priority="4" expand="true"/>
-        <task id="32" name="Installation serveur" color="#8cb6ce" meeting="false" start="2015-03-09" duration="5" complete="0" expand="true"/>
-        <task id="9" name="Boîtier d'émargement" color="#000000" meeting="false" start="2015-03-02" duration="65" complete="0" expand="true">
+        <task id="9" name="Boîtier d'émargement" color="#000000" meeting="false" start="2015-03-02" duration="56" complete="0" expand="true">
             <task id="16" name="Etude fonctionnelle" color="#000000" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true">
-                <task id="18" name="Choix des composants" color="#8cb6ce" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
+                <task id="18" name="Choix des composants" color="#8cb6ce" meeting="false" start="2015-03-02" duration="10" complete="0" expand="true">
+                    <task id="54" name="Choix lecteur RFID" color="#8cb6ce" meeting="false" start="2015-03-02" duration="5" complete="0" expand="true"/>
+                    <task id="55" name="Choix mini-serveur" color="#8cb6ce" meeting="false" start="2015-03-02" duration="10" complete="0" expand="true"/>
+                    <task id="56" name="Signaux lumineux" color="#8cb6ce" meeting="false" start="2015-03-09" duration="4" complete="0" expand="true"/>
+                </task>
+                <task id="46" name="Choix technologiques" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true">
+                    <task id="57" name="Langages utilisés" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
+                    <task id="59" name="Stockage des données" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
+                    <task id="58" name="Bibliothèque RFID" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
+                    <task id="60" name="Connexion serveur" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
+                </task>
                 <task id="20" name="Synchronisation données" color="#8cb6ce" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
-                <task id="46" name="Choix technologiques" color="#8cb6ce" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
             </task>
-            <task id="44" name="Développement software" color="#8cb6ce" meeting="false" start="2015-03-23" duration="50" complete="0" expand="true"/>
-            <task id="45" name="Développement hardware" color="#8cb6ce" meeting="false" start="2015-03-23" duration="50" complete="0" expand="true"/>
-        </task>
-        <task id="7" name="Application / Serveur" meeting="false" start="2015-03-02" duration="65" complete="0" expand="true">
-            <task id="10" name="Analyse du projet" color="#8cb6ce" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
-            <task id="14" name="Interfaçage" meeting="false" start="2015-03-23" duration="50" complete="0" expand="true">
-                <task id="12" name="Synchronisation des données" color="#8cb6ce" meeting="false" start="2015-03-23" duration="50" complete="0" expand="true"/>
-                <task id="13" name="Gestion des absences" color="#8cb6ce" meeting="false" start="2015-03-23" duration="50" complete="0" expand="true"/>
-                <task id="11" name="Structure du projet (BD)" color="#8cb6ce" meeting="false" start="2015-03-23" duration="50" complete="0" expand="true"/>
+            <task id="44" name="Développement software" color="#8cb6ce" meeting="false" start="2015-03-23" duration="41" complete="0" expand="true">
+                <task id="61" name="Prise en main code PEIP" color="#8cb6ce" meeting="false" start="2015-03-23" duration="10" complete="0" expand="true"/>
+                <task id="62" name="Adaptation" color="#8cb6ce" meeting="false" start="2015-04-07" duration="9" complete="0" expand="true"/>
+                <task id="63" name="Développement supplémentaire" color="#8cb6ce" meeting="false" start="2015-04-20" duration="22" complete="0" expand="true"/>
             </task>
-            <task id="31" name="Développement" color="#8cb6ce" meeting="false" start="2015-03-23" duration="50" complete="0" expand="true"/>
+            <task id="45" name="Développement hardware" color="#8cb6ce" meeting="false" start="2015-03-23" duration="41" complete="0" expand="true">
+                <task id="64" name="Schéma structurel" color="#8cb6ce" meeting="false" start="2015-03-23" duration="14" complete="0" expand="true"/>
+                <task id="65" name="Routage" color="#8cb6ce" meeting="false" start="2015-04-13" duration="10" complete="0" expand="true"/>
+                <task id="66" name="Tests" color="#8cb6ce" meeting="false" start="2015-04-27" duration="17" complete="0" expand="true"/>
+            </task>
         </task>
-        <task id="52" name="Rédaction rapport" color="#8cb6ce" meeting="false" start="2015-06-08" duration="10" complete="0" expand="true"/>
+        <task id="7" name="Application / Serveur" meeting="false" start="2015-03-02" duration="60" complete="0" expand="true">
+            <task id="67" name="Fichier de synchro Carte--&gt;Etudiant" color="#8cb6ce" meeting="false" start="2015-03-23" duration="5" complete="0" expand="true"/>
+            <task id="68" name="Installation VM test" color="#8cb6ce" meeting="false" start="2015-03-26" duration="6" complete="0" expand="true"/>
+            <task id="10" name="Analyse du projet" color="#8cb6ce" meeting="false" start="2015-03-02" duration="25" complete="0" expand="true">
+                <task id="70" name="Diagramme de CU" color="#8cb6ce" meeting="false" start="2015-03-02" duration="8" complete="0" expand="true"/>
+                <task id="71" name="Diagramme de séquences" color="#8cb6ce" meeting="false" start="2015-03-03" duration="9" complete="0" expand="true"/>
+                <task id="72" name="Diagramme de classes" color="#8cb6ce" meeting="false" start="2015-03-12" duration="12" complete="0" expand="true"/>
+                <task id="87" name="Analyse partie SmartPhone" color="#8cb6ce" meeting="false" start="2015-03-16" duration="15" complete="0" expand="true"/>
+                <task id="69" name="Etude de Ksup" color="#8cb6ce" meeting="false" start="2015-03-23" duration="10" complete="0" expand="true"/>
+            </task>
+            <task id="14" name="Interfaçage" meeting="false" start="2015-03-30" duration="34" complete="0" expand="true">
+                <task id="12" name="Synchronisation des données" color="#8cb6ce" meeting="false" start="2015-03-30" duration="9" complete="0" expand="true"/>
+                <task id="13" name="Gestion des absences" color="#8cb6ce" meeting="false" start="2015-03-30" duration="9" complete="0" expand="true"/>
+                <task id="11" name="Structure du projet (BD)" color="#8cb6ce" meeting="false" start="2015-04-13" duration="25" complete="0" expand="true">
+                    <task id="85" name="Partie applicative" color="#8cb6ce" meeting="false" start="2015-04-13" duration="18" complete="0" expand="true"/>
+                    <task id="86" name="Partie mobile" color="#8cb6ce" meeting="false" start="2015-05-11" duration="7" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="31" name="Développement" color="#8cb6ce" meeting="false" start="2015-03-23" duration="45" complete="0" expand="true">
+                <task id="73" name="Affichage des absents" color="#8cb6ce" meeting="false" start="2015-03-23" duration="10" complete="0" expand="true"/>
+                <task id="74" name="Gestion des historiques" color="#8cb6ce" meeting="false" start="2015-04-07" duration="9" complete="0" expand="true"/>
+                <task id="75" name="Justification des absences" color="#8cb6ce" meeting="false" start="2015-04-20" duration="5" complete="0" expand="true"/>
+                <task id="84" name="Importation fichier de synchro" color="#8cb6ce" meeting="false" start="2015-04-27" duration="4" complete="0" expand="true"/>
+                <task id="76" name="Extraction d'une synthèse" color="#8cb6ce" meeting="false" start="2015-05-04" duration="8" complete="0" expand="true"/>
+                <task id="77" name="Reporting parametrable" color="#8cb6ce" meeting="false" start="2015-05-18" duration="9" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="78" name="Rassemblement des deux parties" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true">
+            <task id="82" name="Test insertion fichier de synchro" color="#8cb6ce" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true"/>
+            <task id="79" name="Test émargement" color="#8cb6ce" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true"/>
+            <task id="80" name="Test remonté données sur serveur" color="#8cb6ce" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true"/>
+            <task id="81" name="Extraction d'un reporting" color="#8cb6ce" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true"/>
+        </task>
+        <task id="52" name="Rédaction rapport" color="#8cb6ce" meeting="false" start="2015-06-15" duration="10" complete="0" expand="true"/>
         <task id="53" name="Préparation soutenance" color="#8cb6ce" meeting="false" start="2015-06-22" duration="5" complete="0" expand="true"/>
     </tasks>
     <resources/>
@@ -182,9 +222,9 @@
         <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="253" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="84" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="105" visible="true"/>
+        <displaycolumn property-id="tpd3" order="0" width="271" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="81" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="86" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>
