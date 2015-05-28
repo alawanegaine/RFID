@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-02-16" view-index="0" gantt-divider-location="421" resource-divider-location="300" version="2.7" locale="fr">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="65" order="0"/>
+        <field id="tpd4" name="Date de début" width="16" order="1"/>
+        <field id="tpd5" name="Date de fin" width="17" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="52" order="0"/>
+        <field id="1" name="Rôle par défaut" width="47" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="5" name="Boîtier" meeting="false" start="2015-02-16" duration="74" complete="0" expand="true">
+            <task id="0" name="Etude fonctionnelle" meeting="false" start="2015-03-02" duration="64" complete="0" expand="true">
+                <task id="2" name="Choix composants" color="#8cb6ce" meeting="false" start="2015-03-02" duration="10" complete="0" expand="true"/>
+                <task id="1" name="Choix composants_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+                <task id="3" name="Choix technologiques" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
+                <task id="4" name="Choix technologiques_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="23" name="Synchronisation données" color="#8cb6ce" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
+            <task id="24" name="Synchronisation données_réel" meeting="false" start="2015-02-16" duration="1" complete="0" expand="true"/>
+            <task id="7" name="Développement soft" color="#8cb6ce" meeting="false" start="2015-03-23" duration="45" complete="0" expand="true"/>
+            <task id="15" name="Développement soft_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="8" name="Développement hard" color="#8cb6ce" meeting="false" start="2015-03-23" duration="45" complete="0" expand="true"/>
+            <task id="16" name="Développment hard_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="6" name="Fichier synchro carte/etudiant" meeting="false" start="2015-03-02" duration="65" complete="0" expand="true">
+            <task id="9" name="Fichier synchro carte/etudiant" color="#8cb6ce" meeting="false" start="2015-03-23" duration="5" complete="0" expand="true"/>
+            <task id="17" name="Fichier synchro réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="10" name="Installation VM Test" color="#8cb6ce" meeting="false" start="2015-03-26" duration="7" complete="0" expand="true"/>
+            <task id="18" name="Installation VM test_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="11" name="Analyse" color="#8cb6ce" meeting="false" start="2015-03-02" duration="25" complete="0" expand="true"/>
+            <task id="19" name="Analyse_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="12" name="Interfaçage" color="#8cb6ce" meeting="false" start="2015-03-23" duration="43" complete="0" expand="true"/>
+            <task id="20" name="Interfaçage_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="13" name="Développement" color="#8cb6ce" meeting="false" start="2015-03-30" duration="45" complete="0" expand="true"/>
+            <task id="21" name="Développement_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="14" name="Rassemblement 2 parties" color="#8cb6ce" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd2" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd12" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd6" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd10" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd11" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd3" order="0" width="273" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="69" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="73" visible="true"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
