@@ -60,6 +60,7 @@
             <task id="21" name="Développement_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
         </task>
         <task id="14" name="Rassemblement 2 parties" color="#8cb6ce" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true"/>
+        <task id="42" name="Rassemblement 2 parties_réel" meeting="false" start="2015-02-16" duration="1" complete="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
