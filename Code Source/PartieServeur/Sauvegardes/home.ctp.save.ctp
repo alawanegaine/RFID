@@ -42,7 +42,7 @@ $cakeDescription = 'Coucou les ptits loulous!';
     <header>
         <div class="header-image">
             <?= $this->Html->image('http://cakephp.org/img/cake-logo.png') ?>
-            <h1>Coucou</h1>
+            <h1>La baise au cul</h1>
         </div>
     </header>
     <div id="content">
@@ -181,7 +181,8 @@ $cakeDescription = 'Coucou les ptits loulous!';
                     <ul><li>For the Development of CakePHP Git repository, Downloads</li></ul></li>
                     <li><a href="https://github.com/cakephp/cakephp/issues">CakePHP Issues</a>
                     <ul><li>CakePHP issues and pull requests</li></ul></li>
-                    <li><?php $this->element('accueil'); ?></li>
+                    <li><a href="Acceuil.ctp"></a></li>
+                    <li> coucou </li>
                 </ul>
             </div>
         </div>
