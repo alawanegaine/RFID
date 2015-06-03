@@ -1,0 +1,43 @@
+<div class="actions columns large-2 medium-3">
+    <h3><?= __('Actions') ?></h3>
+    <ul class="side-nav">
+        <li><?= $this->Html->link(__('New Groupe'), ['action' => 'add']) ?></li>
+    </ul>
+</div>
+<div class="groupes index large-10 medium-9 columns">
+    <table cellpadding="0" cellspacing="0">
+    <thead>
+        <tr>
+            <th><?= $this->Paginator->sort('v_id_groupe') ?></th>
+            <th><?= $this->Paginator->sort('v_id_classe') ?></th>
+            <th><?= $this->Paginator->sort('v_libelle') ?></th>
+            <th><?= $this->Paginator->sort('v_statut') ?></th>
+            <th class="actions"><?= __('Actions') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($groupes as $groupe): ?>
+        <tr>
+            <td><?= h($groupe->v_id_groupe) ?></td>
+            <td><?= h($groupe->v_id_classe) ?></td>
+            <td><?= h($groupe->v_libelle) ?></td>
+            <td><?= h($groupe->v_statut) ?></td>
+            <td class="actions">
+                <?= $this->Html->link(__('View'), ['action' => 'view', $groupe->v_id_groupe]) ?>
+                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $groupe->v_id_groupe]) ?>
+                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $groupe->v_id_groupe], ['confirm' => __('Are you sure you want to delete # {0}?', $groupe->v_id_groupe)]) ?>
+            </td>
+        </tr>
+
+    <?php endforeach; ?>
+    </tbody>
+    </table>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('next') . ' >') ?>
+        </ul>
+        <p><?= $this->Paginator->counter() ?></p>
+    </div>
+</div>
