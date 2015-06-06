@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-02-16" view-index="0" gantt-divider-location="421" resource-divider-location="300" version="2.7" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-03-16" view-index="0" gantt-divider-location="406" resource-divider-location="300" version="2.7" locale="fr">
     <description/>
     <view zooming-state="default:7" id="gantt-chart">
         <field id="tpd3" name="Nom" width="65" order="0"/>
         <field id="tpd4" name="Date de début" width="16" order="1"/>
         <field id="tpd5" name="Date de fin" width="17" order="2"/>
+        <option id="color.recent"><![CDATA[#cc3300 #009900 #009900 #ff6600 #339900 #009900 #009900 #009900 #ff6600 #009900]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nom" width="52" order="0"/>
-        <field id="1" name="Rôle par défaut" width="47" order="1"/>
+        <field id="0" name="Nom" width="50" order="0"/>
+        <field id="1" name="Rôle par défaut" width="50" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -33,34 +34,34 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="5" name="Boîtier" meeting="false" start="2015-02-16" duration="74" complete="0" expand="true">
-            <task id="0" name="Etude fonctionnelle" meeting="false" start="2015-03-02" duration="64" complete="0" expand="true">
+        <task id="5" name="Boîtier" meeting="false" start="2015-03-02" duration="75" complete="0" expand="true">
+            <task id="0" name="Etude fonctionnelle" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true">
                 <task id="2" name="Choix composants" color="#8cb6ce" meeting="false" start="2015-03-02" duration="10" complete="0" expand="true"/>
-                <task id="1" name="Choix composants_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+                <task id="1" name="Choix composants_réel" color="#009900" meeting="false" start="2015-03-02" duration="10" complete="0" expand="true"/>
                 <task id="3" name="Choix technologiques" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
-                <task id="4" name="Choix technologiques_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+                <task id="4" name="Choix technologiques_réel" color="#009900" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
             </task>
             <task id="23" name="Synchronisation données" color="#8cb6ce" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
-            <task id="24" name="Synchronisation données_réel" meeting="false" start="2015-02-16" duration="1" complete="0" expand="true"/>
+            <task id="24" name="Synchronisation données_réel" color="#009933" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
             <task id="7" name="Développement soft" color="#8cb6ce" meeting="false" start="2015-03-23" duration="45" complete="0" expand="true"/>
-            <task id="15" name="Développement soft_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="15" name="Développement soft_réel" color="#ff6600" meeting="false" start="2015-04-06" duration="50" complete="0" expand="true"/>
             <task id="8" name="Développement hard" color="#8cb6ce" meeting="false" start="2015-03-23" duration="45" complete="0" expand="true"/>
-            <task id="16" name="Développment hard_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="16" name="Développment hard_réel" color="#009900" meeting="false" start="2015-05-18" duration="5" complete="0" expand="true"/>
         </task>
-        <task id="6" name="Fichier synchro carte/etudiant" meeting="false" start="2015-03-02" duration="65" complete="0" expand="true">
+        <task id="6" name="Fichier synchro carte/etudiant" meeting="false" start="2015-03-02" duration="75" complete="0" expand="true">
             <task id="9" name="Fichier synchro carte/etudiant" color="#8cb6ce" meeting="false" start="2015-03-23" duration="5" complete="0" expand="true"/>
-            <task id="17" name="Fichier synchro réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="17" name="Fichier synchro réel" color="#009900" meeting="false" start="2015-03-20" duration="3" complete="0" expand="true"/>
             <task id="10" name="Installation VM Test" color="#8cb6ce" meeting="false" start="2015-03-26" duration="7" complete="0" expand="true"/>
-            <task id="18" name="Installation VM test_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="18" name="Installation VM test_réel" color="#009900" meeting="false" start="2015-04-13" duration="5" complete="0" expand="true"/>
             <task id="11" name="Analyse" color="#8cb6ce" meeting="false" start="2015-03-02" duration="25" complete="0" expand="true"/>
-            <task id="19" name="Analyse_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
-            <task id="12" name="Interfaçage" color="#8cb6ce" meeting="false" start="2015-03-23" duration="43" complete="0" expand="true"/>
-            <task id="20" name="Interfaçage_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="19" name="Analyse_réel" color="#ff6600" meeting="false" start="2015-03-02" duration="40" complete="0" expand="true"/>
+            <task id="12" name="BD" color="#8cb6ce" meeting="false" start="2015-04-27" duration="18" complete="0" expand="true"/>
+            <task id="20" name="BD_réel" color="#009900" meeting="false" start="2015-04-27" duration="20" complete="0" expand="true"/>
             <task id="13" name="Développement" color="#8cb6ce" meeting="false" start="2015-03-30" duration="45" complete="0" expand="true"/>
-            <task id="21" name="Développement_réel" meeting="false" start="2015-05-28" duration="1" complete="0" expand="true"/>
+            <task id="21" name="Développement_réel" color="#009900" meeting="false" start="2015-04-13" duration="45" complete="0" expand="true"/>
         </task>
         <task id="14" name="Rassemblement 2 parties" color="#8cb6ce" meeting="false" start="2015-06-01" duration="10" complete="0" expand="true"/>
-        <task id="42" name="Rassemblement 2 parties_réel" meeting="false" start="2015-02-16" duration="1" complete="0" expand="true"/>
+        <task id="42" name="Rassemblement 2 parties_réel" color="#cc3300" meeting="false" start="2015-06-08" duration="5" complete="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
@@ -76,9 +77,9 @@
         <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="273" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="69" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="73" visible="true"/>
+        <displaycolumn property-id="tpd3" order="0" width="263" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="67" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="70" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>
