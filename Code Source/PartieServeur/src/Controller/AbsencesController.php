@@ -18,7 +18,10 @@ class AbsencesController extends AppController
      */
     public function index()
     {
-        $this->set('absences', $this->paginate($this->Absences));
+        $this->LoadModel('classes');
+        $this->set('absences', $this->Absences->find('all')->contain(['etudiants','groupes']));
+        $this->set('classes', $this->Absences->Etudiants->Groupes->find('all'));
+        //print_r($this->classes);
         $this->set('_serialize', ['absences']);
     }
 

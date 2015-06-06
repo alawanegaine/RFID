@@ -24,7 +24,7 @@ if (!Configure::read('debug')):
     throw new NotFoundException();
 endif;
 
-$cakeDescription = 'Coucou les ptits loulous!';
+$cakeDescription = 'Emargement';
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,22 +41,20 @@ $cakeDescription = 'Coucou les ptits loulous!';
 <body class="home">
     <header>
         <div class="header-image">
-            <?= $this->Html->image('http://cakephp.org/img/cake-logo.png') ?>
-            <h1>Coucou</h1>
+            <h1>Liste des absences</h1>
         </div>
     </header>
     <div id="content">
+        <div class="row">
+            
+        </div>
+    </div>
+    <!--<div id="content">
         <?php
         if (Configure::read('debug')):
             Debugger::checkSecurityKeys();
         endif;
         ?>
-        <p id="url-rewriting-warning" style="background-color:#e32; color:#fff;display:none">
-            URL rewriting is not properly configured on your server.
-            1) <a target="_blank" href="http://book.cakephp.org/3.0/en/installation/url-rewriting.html" style="color:#fff;">Help me configure it</a>
-            2) <a target="_blank" href="http://book.cakephp.org/3.0/en/development/configuration.html#general-configuration" style="color:#fff;">I don't / can't use URL rewriting</a>
-        </p>
-
         <div class="row">
             <div class="columns large-5 platform checks">
                 <?php if (version_compare(PHP_VERSION, '5.4.16', '>=')): ?>
@@ -107,7 +105,7 @@ $cakeDescription = 'Coucou les ptits loulous!';
             </div>
         </div>
         <div class="row">
-            <div class="columns large-12  database checks">
+            <div class="columns large-15  database checks">
                 <?php
                     try {
                         $connection = ConnectionManager::get('default');
@@ -185,7 +183,7 @@ $cakeDescription = 'Coucou les ptits loulous!';
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
     <footer>
     </footer>
 </body>

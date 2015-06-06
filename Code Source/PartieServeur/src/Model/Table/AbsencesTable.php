@@ -25,6 +25,10 @@ class AbsencesTable extends Table
         $this->table('absences');
         $this->displayField('v_id_abs');
         $this->primaryKey('v_id_abs');
+        $this->belongsTo('etudiants', [
+            'foreignKey' => 'v_id_etu',
+            'propertyName' => 'etudiant'
+        ]);
     }
 
     /**
