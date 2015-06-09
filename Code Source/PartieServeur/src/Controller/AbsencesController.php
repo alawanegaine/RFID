@@ -21,7 +21,6 @@ class AbsencesController extends AppController
         $this->set('absences', $this->Absences->find('all')->contain(['etudiants', 
                                                                       'Etudiants.groupes', 
                                                                       'Etudiants.Groupes.classes']));
-        //print_r($this->classes);
         $this->set('_serialize', ['absences']);
     }
 

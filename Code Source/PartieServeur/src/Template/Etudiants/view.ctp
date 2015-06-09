@@ -11,9 +11,9 @@
     <h2><?= $text = h($etudiant->v_nom) . ' ' . ucfirst(strtolower(h($etudiant->v_prenom))) ?></h2>
     <div class="row">
         <div class="large-5 columns strings">
-            <h6 class="subheader"><?= __('Numéro étudiant') ?></h6>
+            <h6 class="subheader"><?= __('Date') ?></h6>
             <p><?= h($etudiant->v_id_etu) ?></p>
-            <h6 class="subheader"><?= __('Numéro de carte étudiante') ?></h6>
+            <h6 class="subheader"><?= __('Justification') ?></h6>
             <p><?= h($etudiant->v_id_carte) ?></p>
             <h6 class="subheader"><?= __('Nom') ?></h6>
             <p><?= h($etudiant->v_nom) ?></p>
@@ -23,4 +23,28 @@
             <p><?= $text = h($etudiant->groupe->classe->v_libelle) . '-' . h($etudiant->groupe->v_libelle) ?></p>
         </div>
     </div>
+    
+    <h3>Liste des absences</h3>
+    <table cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th><?= $this->Paginator->sort('Date') ?></th>
+                <th><?= $this->Paginator->sort('Justification') ?></th>
+                <th class="actions"><?= __('Actions') ?></th>
+            </tr>
+        </thead>
+    <tbody>
+    <?php foreach ($etudiant->absence as $absence): ?>
+        <tr>
+            <td><?= h($absence->d_abs) ?></td>
+            <td><?= h($absence->v_just) ?></td>
+            <td class="actions">
+                <?= $this->Form->postLink(__('Justifier'), ['action' => 'justifier', $absence->v_id_abs], ['confirm' => __('Etes-vous sûr de vouloir justifier l\'absence?')]) ?>
+            </td>
+        </tr>
+        
+
+    <?php endforeach; ?>
+    </tbody>
+    </table>
 </div>

@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Etudiants Controller
@@ -32,11 +33,13 @@ class EtudiantsController extends AppController
     public function view($id = null)
     {
         $etudiant = $this->Etudiants->get($id, [
-            'contain' => ['groupes',
+            'contain' => ['absences',
+                          'groupes',
                           'Groupes.classes']
         ]);
-        $this->set('etudiant', $etudiant);
-        $this->set('_serialize', ['etudiant']);
+       
+       $this->set('etudiant', $etudiant);
+       $this->set('_serialize', ['etudiant']);
     }
 
     /**
@@ -102,5 +105,25 @@ class EtudiantsController extends AppController
             $this->Flash->error(__('The etudiant could not be deleted. Please, try again.'));
         }
         return $this->redirect(['action' => 'index']);
+    }
+    
+    public function justifier($id_absence = null){
+        $this->request->allowMethod(['post', 'delete']);
+        
+        $absencesTable = TableRegistry::get('Absences');
+        $absence= $absencesTable->get($id_absence);
+        
+        if($absence->v_just == 'O'){
+            $this->Flash->default(__('L\'absence est déjà justifiée'));
+            return $this->redirect(['action' => 'view/'.$absence->v_id_etu]);
+        }
+        $absence->v_just = 'O';
+        if($absencesTable->save($absence)){
+            $this->Flash->success(__('L\'absence a bien été justifiée'));
+        }else{
+            $this->Flash->error(__('Un problème est survenu lors de la justification de l\'absence'));
+        }
+        
+        return $this->redirect(['action' => 'view/'.$absence->v_id_etu]);
     }
 }
