@@ -34,6 +34,8 @@ class AppController extends Controller
      *
      * @return void
      */
+    public $helpers = ['Form', 'Html', 'Time'];
+    
     public function initialize()
     {
         parent::initialize();

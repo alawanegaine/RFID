@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 juin 2015, 16:43:47
+    Author     : kevinrepillez
+*/
+
+ul {
+ padding:0;
+ margin:0;
+ list-style-type:none;
+ }
+li {
+ float:left; /*pour IE*/
+ margin-left:10px;
+ }
+ 
+ul li a {
+ display:block;
+ float:left;   
+ width:240px;
+ line-height:50px; /*hauteur de l'image de fond*/
+ background:#EBEBEB;
+ color:#DCDCDC;
+ text-decoration:none;
+ text-align:center;
+ }
+ 
+ ul#listeJour{ 
+padding:0;
+margin:0;
+list-style-type:none;
+}
+
+ul#listeJour li a{
+ display:block;
+ float:left;   
+ width:240px;
+ line-height:50px; /*hauteur de l'image de fond*/
+ background:#FFFFFF;
+ color:red;
+ text-decoration:none;
+ text-align:center;
+ } 
+
+ 
+ 
+ 
+ 
