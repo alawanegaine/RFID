@@ -25,6 +25,10 @@ class GroupesTable extends Table
         $this->table('groupes');
         $this->displayField('v_id_groupe');
         $this->primaryKey('v_id_groupe');
+        $this->belongsTo('classes', [
+            'foreignKey' => 'v_id_classe',
+            'propertyName' => 'classe'
+        ]);
     }
 
     /**

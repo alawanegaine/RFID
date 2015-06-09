@@ -10,7 +10,6 @@ use App\Controller\AppController;
  */
 class AbsencesController extends AppController
 {
-
     /**
      * Index method
      *
@@ -19,8 +18,9 @@ class AbsencesController extends AppController
     public function index()
     {
         $this->LoadModel('classes');
-        $this->set('absences', $this->Absences->find('all')->contain(['etudiants','groupes']));
-        $this->set('classes', $this->Absences->Etudiants->Groupes->find('all'));
+        $this->set('absences', $this->Absences->find('all')->contain(['etudiants', 
+                                                                      'Etudiants.groupes', 
+                                                                      'Etudiants.Groupes.classes']));
         //print_r($this->classes);
         $this->set('_serialize', ['absences']);
     }

@@ -25,6 +25,10 @@ class EtudiantsTable extends Table
         $this->table('etudiants');
         $this->displayField('v_id_etu');
         $this->primaryKey('v_id_etu');
+        $this->belongsTo('groupes', [
+            'foreignKey' => 'v_id_groupe',
+            'propertyName' => 'groupe'
+        ]);
     }
 
     /**

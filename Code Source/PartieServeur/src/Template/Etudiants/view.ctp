@@ -8,21 +8,19 @@
     </ul>
 </div>
 <div class="etudiants view large-10 medium-9 columns">
-    <h2><?= h($etudiant->v_id_etu) ?></h2>
+    <h2><?= $text = h($etudiant->v_nom) . ' ' . ucfirst(strtolower(h($etudiant->v_prenom))) ?></h2>
     <div class="row">
         <div class="large-5 columns strings">
-            <h6 class="subheader"><?= __('V Id Etu') ?></h6>
+            <h6 class="subheader"><?= __('Numéro étudiant') ?></h6>
             <p><?= h($etudiant->v_id_etu) ?></p>
-            <h6 class="subheader"><?= __('V Id Carte') ?></h6>
+            <h6 class="subheader"><?= __('Numéro de carte étudiante') ?></h6>
             <p><?= h($etudiant->v_id_carte) ?></p>
-            <h6 class="subheader"><?= __('V Prenom') ?></h6>
-            <p><?= h($etudiant->v_prenom) ?></p>
-            <h6 class="subheader"><?= __('V Nom') ?></h6>
+            <h6 class="subheader"><?= __('Nom') ?></h6>
             <p><?= h($etudiant->v_nom) ?></p>
-            <h6 class="subheader"><?= __('V Id Groupe') ?></h6>
-            <p><?= h($etudiant->v_id_groupe) ?></p>
-            <h6 class="subheader"><?= __('V Statut') ?></h6>
-            <p><?= h($etudiant->v_statut) ?></p>
+            <h6 class="subheader"><?= __('Prénom') ?></h6>
+            <p><?= ucfirst(strtolower(h($etudiant->v_prenom))) ?></p>
+            <h6 class="subheader"><?= __('Promotion') ?></h6>
+            <p><?= $text = h($etudiant->groupe->classe->v_libelle) . '-' . h($etudiant->groupe->v_libelle) ?></p>
         </div>
     </div>
 </div>
