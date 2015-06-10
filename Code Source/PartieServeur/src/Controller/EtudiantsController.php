@@ -90,7 +90,10 @@ class EtudiantsController extends AppController
         $this->set(compact('etudiant'));
         $this->set('_serialize', ['etudiant']);
         
-        $this->set('groupes',TableRegistry::get('Groupes')->find()->combine('v_id_groupe', 'v_libelle')->toArray()); 
+        $this->set('groupes',TableRegistry::get('Groupes')->find('list',[
+            'keyField' => 'v_id_groupe',
+            'valueField' => 'toto'
+        ])->contain(['Classes'])); 
     }
 
     /**

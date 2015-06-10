@@ -13,6 +13,9 @@ use Cake\Validation\Validator;
  */
 class GroupesTable extends Table
 {
+    public $virtualFields = [
+        'full_groupe' => 'CONCAT(Groupe.v_id_groupe," ",Groupe.v_libelle)'
+    ];
 
     /**
      * Initialize method
