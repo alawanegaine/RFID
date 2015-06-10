@@ -8,7 +8,7 @@
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('Id étudiant') ?></th>
+            <th><?= $this->Paginator->sort('N° étudiant') ?></th>
             <th><?= $this->Paginator->sort('Id carte') ?></th>
             <th><?= $this->Paginator->sort('Prénom') ?></th>
             <th><?= $this->Paginator->sort('Nom') ?></th>

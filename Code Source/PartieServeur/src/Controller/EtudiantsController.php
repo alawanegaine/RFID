@@ -77,6 +77,7 @@ class EtudiantsController extends AppController
         $etudiant = $this->Etudiants->get($id, [
             'contain' => []
         ]);
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $etudiant = $this->Etudiants->patchEntity($etudiant, $this->request->data);
             if ($this->Etudiants->save($etudiant)) {
@@ -88,6 +89,8 @@ class EtudiantsController extends AppController
         }
         $this->set(compact('etudiant'));
         $this->set('_serialize', ['etudiant']);
+        
+        $this->set('groupes',TableRegistry::get('Groupes')->find()->combine('v_id_groupe', 'v_libelle')->toArray()); 
     }
 
     /**

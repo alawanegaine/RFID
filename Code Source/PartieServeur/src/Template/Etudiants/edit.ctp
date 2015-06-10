@@ -15,11 +15,11 @@
     <fieldset>
         <legend><?= __('Edit Etudiant') ?></legend>
         <?php
-            echo $this->Form->input('Id étudiant');
-            echo $this->Form->input('Id carte');
-            echo $this->Form->input('Prénom');
-            echo $this->Form->input('Nom');
-            echo $this->Form->input('Promotion');
+            echo $this->Form->input('v_id_etu',['label' => 'N° Etudiant']);
+            echo $this->Form->input('v_id_carte',['label' => 'Id carte']);
+            echo $this->Form->input('v_prenom',['label' => 'Prénom']);
+            echo $this->Form->input('v_nom',['label' => 'Nom']);
+            echo $this->Form->select('v_id_groupe',$groupes,['label' => 'Promotion']);
             //echo $this->Form->input('v_statut');
         ?>
     </fieldset>
