@@ -19,7 +19,7 @@ class GroupesController extends AppController
     public function index()
     {
         $this->set('groupes', $this->paginate($this->Groupes));
-        echo "coucou";
+        $this->set('_serialize', ['groupes']);
     }
 
     /**
