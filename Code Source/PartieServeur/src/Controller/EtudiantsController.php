@@ -21,6 +21,8 @@ class EtudiantsController extends AppController
     {
         $this->set('etudiants', $this->paginate($this->Etudiants));
         $this->set('_serialize', ['etudiants']);
+        $this->set('etudiants', $this->Etudiants->find('all')->contain(['groupes',
+                                                                        'Groupes.classes']));
     }
 
     /**

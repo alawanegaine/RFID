@@ -8,12 +8,12 @@
     <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
-            <th><?= $this->Paginator->sort('v_id_etu') ?></th>
-            <th><?= $this->Paginator->sort('v_id_carte') ?></th>
-            <th><?= $this->Paginator->sort('v_prenom') ?></th>
-            <th><?= $this->Paginator->sort('v_nom') ?></th>
-            <th><?= $this->Paginator->sort('v_id_groupe') ?></th>
-            <th><?= $this->Paginator->sort('v_statut') ?></th>
+            <th><?= $this->Paginator->sort('Id étudiant') ?></th>
+            <th><?= $this->Paginator->sort('Id carte') ?></th>
+            <th><?= $this->Paginator->sort('Prénom') ?></th>
+            <th><?= $this->Paginator->sort('Nom') ?></th>
+            <th><?= $this->Paginator->sort('Promotion') ?></th>
+            <!--<th><?= $this->Paginator->sort('v_statut') ?></th>-->
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
     </thead>
@@ -22,10 +22,15 @@
         <tr>
             <td><?= h($etudiant->v_id_etu) ?></td>
             <td><?= h($etudiant->v_id_carte) ?></td>
-            <td><?= h($etudiant->v_prenom) ?></td>
+            <td><?= $text = ucfirst(strtolower(h($etudiant->v_prenom))) ?></td>
+            <!--<td><?= h($etudiant->v_prenom) ?></td>-->
             <td><?= h($etudiant->v_nom) ?></td>
-            <td><?= h($etudiant->v_id_groupe) ?></td>
-            <td><?= h($etudiant->v_statut) ?></td>
+            <td><?= $text = h($etudiant->groupe->classe->v_libelle) . '-' . h($etudiant->groupe->v_libelle) ?></td>
+            <!--<td><?= h($etudiant->v_nom) ?></td>-->
+            <!--<td><?= h($etudiant->v_id_groupe) ?></td>-->
+            <!--<td><?= h($etudiant->v_statut) ?></td>-->
+                        
+            
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $etudiant->v_id_etu]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $etudiant->v_id_etu]) ?>
