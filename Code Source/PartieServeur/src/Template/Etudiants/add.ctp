@@ -9,10 +9,11 @@
     <fieldset>
         <legend><?= __('Add Etudiant') ?></legend>
         <?php
-            echo $this->Form->input('v_id_carte');
-            echo $this->Form->input('v_prenom');
-            echo $this->Form->input('v_nom');
-            echo $this->Form->input('v_id_groupe');
+            echo $this->Form->input('Id étudiant');
+            echo $this->Form->input('Id carte');
+            echo $this->Form->input('Prénom');
+            echo $this->Form->input('Nom');
+            echo $this->Form->input('Promotion');
             echo $this->Form->input('v_statut');
         ?>
     </fieldset>
