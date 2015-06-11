@@ -134,4 +134,8 @@ class EtudiantsController extends AppController
         
         return $this->redirect(['action' => 'view/'.$absence->v_id_etu]);
     }
+    
+    public function importCsv(){
+        
+    }
 }

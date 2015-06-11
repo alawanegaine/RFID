@@ -1,7 +1,9 @@
 <div class="actions columns large-2 medium-3">
     <h3><?= __('Actions') ?></h3>
     <ul class="side-nav">
-        <li><?= $this->Html->link(__('New Absence'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Emploi du temps'), ['controller' => 'Creneaux','action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Gestion étudiant'), ['controller' => 'Etudiants','action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Paramétrage'), ['controller' => 'Pages', 'action' => 'parametrage']) ?></li>
     </ul>
 </div>
 <div class="absences index large-10 medium-9 columns">

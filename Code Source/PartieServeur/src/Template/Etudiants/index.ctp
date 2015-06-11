@@ -2,6 +2,7 @@
     <h3><?= __('Actions') ?></h3>
     <ul class="side-nav">
         <li><?= $this->Html->link(__('New Etudiant'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Importer fichier de synchronisation des cartes étudiantes'), ['action' => 'importCsv']) ?></li>
     </ul>
 </div>
 <div class="etudiants index large-10 medium-9 columns">
