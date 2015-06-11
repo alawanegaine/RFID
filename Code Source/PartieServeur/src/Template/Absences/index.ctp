@@ -4,6 +4,18 @@
         <li><?= $this->Html->link(__('New Absence'), ['action' => 'add']) ?></li>
     </ul>
 </div>
+<div class="absences index large-10 medium-9 columns">
+    <fieldset>
+        <legend><?= __('Filtres') ?></legend>
+        <?php 
+            echo $this->Form->create($contact);
+            echo $this->Form->input('Nom');
+            echo $this->Form->input('Prénom');
+            echo $this->Form->button('Filtrer');
+            echo $this->Form->end();
+        ?>
+    </fieldset>    
+</div>
 <!-- Filtres de la liste d'absences -->
 <div class="absences index large-10 medium-9 columns">
     <table cellpadding="0" cellspacing="0">
@@ -18,7 +30,8 @@
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($absences as $absence): ?>
+    <?php foreach ($absences as $absence): 
+          if($absence->v_statut != 'D'): ?>
         <tr>
             <td><?= h($absence->etudiant->v_nom) ?></td>
             <td><?= $text = ucfirst(strtolower(h($absence->etudiant->v_prenom))) ?></td>
@@ -30,20 +43,21 @@
             </td>
             <td><?php if (h($absence->v_just) == "N") {
                         echo "Non";
-                    } else {
+                    } elseif (h($absence->v_just) == "O") {
                         echo "Oui";
+                    } else{
+                        echo "N/C";
                     }
                 ?>
             </td>
             <td class="actions">
                 <?= $this->Html->link(__('Détail'), ['action' => '../etudiants/view', $absence->etudiant->v_id_etu]) ?>
-                <!--<?= $this->Html->link(__('View'), ['action' => 'view', $absence->v_id_abs]) ?>-->
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $absence->v_id_abs]) ?>
-                <!--<?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $absence->v_id_abs], ['confirm' => __('Are you sure you want to delete # {0}?', $absence->v_id_abs)]) ?> -->
+                <?= $this->Form->postLink(__('Justifier'), ['action' => 'justifier', $absence->v_id_abs], ['confirm' => __('Etes-vous sûr de vouloir justifier l\'absence?')]) ?>
             </td>
         </tr>
-
-    <?php endforeach; ?>
+    <?php endif;
+          endforeach; ?>
     </tbody>
     </table>
 </div>
