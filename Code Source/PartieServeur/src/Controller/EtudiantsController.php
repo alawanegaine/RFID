@@ -61,7 +61,8 @@ class EtudiantsController extends AppController
                 $this->Flash->error(__('The etudiant could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('etudiant'));
+        $this->set('etudiant', $etudiant);
+        //$this->set(compact('etudiant'));
         $this->set('_serialize', ['etudiant']);
     }
 
@@ -87,7 +88,8 @@ class EtudiantsController extends AppController
                 $this->Flash->error(__('The etudiant could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('etudiant'));
+        $this->set('etudiant', $etudiant);
+        //$this->set(compact('etudiant'));
         $this->set('_serialize', ['etudiant']);
         
         $this->set('groupes',TableRegistry::get('Groupes')->find('list',[
