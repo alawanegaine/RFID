@@ -1,0 +1,11 @@
+#Creation de la table
+CREATE TABLE emargementReel(
+v_id_emar			INT						NOT NULL AUTO_INCREMENT,
+v_date				TIMESTAMP				DEFAULT CURRENT_TIMESTAMP,
+v_id_carte			VARCHAR(20)				NOT NULL,
+
+CONSTRAINT PK_EMARGEMENTREEL	PRIMARY KEY (v_id_emar)
+);
+
+#insertion nuplet dans la table
+INSERT INTO `emargementReel`(`v_id_carte`) VALUES ('toto');
