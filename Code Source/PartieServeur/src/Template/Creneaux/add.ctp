@@ -9,10 +9,16 @@
     <fieldset>
         <legend><?= __('Add Creneaux') ?></legend>
         <?php
-            echo $this->Form->input('v_id_groupe');
-            echo $this->Form->input('d_date_emarg');
-            echo $this->Form->input('d_date_synchro');
-            echo $this->Form->input('v_statut');
+            echo $this->Form->input('v_id_groupe',[
+                'label' => 'Groupe'
+            ]);
+            echo $this->Form->input('d_date_emarg',[
+                'label' => 'Date de début'
+            ]);
+            echo $this->Form->input('v_statut', [
+                'type' => 'hidden',
+                'value' => 's'
+            ]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

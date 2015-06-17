@@ -18,7 +18,9 @@ class CreneauxController extends AppController
      */
     public function index()
     {
-        $this->set('creneaux', $this->paginate($this->Creneaux));
+        $this->LoadModel('classes');
+        $this->set('creneaux', $this->Creneaux->find('All')->contain(['groupes',
+                                                                      'Groupes.classes']));
         $this->set('_serialize', ['creneaux']);
     }
 
@@ -47,6 +49,7 @@ class CreneauxController extends AppController
     {
         $creneaux = $this->Creneaux->newEntity();
         if ($this->request->is('post')) {
+            print_r($this->request->data);
             $creneaux = $this->Creneaux->patchEntity($creneaux, $this->request->data);
             if ($this->Creneaux->save($creneaux)) {
                 $this->Flash->success(__('The creneaux has been saved.'));

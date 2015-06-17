@@ -25,6 +25,10 @@ class CreneauxTable extends Table
         $this->table('creneaux');
         $this->displayField('v_id_creneau');
         $this->primaryKey('v_id_creneau');
+        $this->belongsTo('groupes', [
+            'foreignKey' => 'v_id_groupe',
+            'propertyName' => 'groupe'
+        ]);
     }
 
     /**
