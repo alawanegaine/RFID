@@ -34,7 +34,7 @@ class CreneauxController extends AppController
      */
     public function view($id = null)
     {
-        $creneaux = $this->Creneaux->get($id)->contain(['groupes','Groupes.classes']);
+        $creneaux = $this->Creneaux->get($id,['contain' => ['groupes','Groupes.classes']]);
         $this->set('creneaux', $creneaux);
         $this->set('_serialize', ['creneaux']);
     }

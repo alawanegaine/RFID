@@ -12,7 +12,7 @@
     <div class="row">
         <div class="large-5 columns strings">
             <h6 class="subheader"><?= __('Promotion') ?></h6>
-            <p><?= h($creneaux->v_id_groupe) ?></p>
+            <p><?= h($creneaux->groupe->classe->v_libelle) . '-' . h($creneaux->groupe->v_libelle) ?></p>
         </div>
         <div class="large-2 columns dates end">
             <h6 class="subheader"><?= __('Date de début') ?></h6>
