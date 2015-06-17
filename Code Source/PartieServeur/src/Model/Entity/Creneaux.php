@@ -16,8 +16,8 @@ class Creneaux extends Entity
      */
     protected $_accessible = [
         'v_id_groupe' => true,
-        'd_date_emarg' => true,
-        'd_date_synchro' => true,
+        'd_date_debut' => true,
+        'd_date_fin' => true,
         'v_statut' => true,
     ];
 }

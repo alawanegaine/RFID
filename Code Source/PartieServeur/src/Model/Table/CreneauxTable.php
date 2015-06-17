@@ -47,14 +47,14 @@ class CreneauxTable extends Table
             ->notEmpty('v_id_groupe');
             
         $validator
-            ->add('d_date_emarg', 'valid', ['rule' => 'datetime'])
-            ->requirePresence('d_date_emarg', 'create')
-            ->notEmpty('d_date_emarg');
+            ->add('d_date_debut', 'valid', ['rule' => 'datetime'])
+            ->requirePresence('d_date_debut', 'create')
+            ->notEmpty('d_date_debut');
             
         $validator
-            ->add('d_date_synchro', 'valid', ['rule' => 'datetime'])
-            ->requirePresence('d_date_synchro', 'create')
-            ->notEmpty('d_date_synchro');
+            ->add('d_date_fin', 'valid', ['rule' => 'datetime'])
+            ->requirePresence('d_date_fin', 'create')
+            ->notEmpty('d_date_fin');
             
         $validator
             ->requirePresence('v_statut', 'create')

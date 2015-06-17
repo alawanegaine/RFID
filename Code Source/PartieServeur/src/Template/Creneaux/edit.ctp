@@ -16,9 +16,12 @@
         <legend><?= __('Edit Creneaux') ?></legend>
         <?php
             echo $this->Form->input('v_id_groupe');
-            echo $this->Form->input('d_date_emarg');
-            echo $this->Form->input('d_date_synchro');
-            echo $this->Form->input('v_statut');
+            echo $this->Form->input('d_date_debut');
+            echo $this->Form->input('d_date_fin');
+            echo $this->Form->input('v_statut',[
+                'type' => 'hidden',
+                'value' => 't'
+            ]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

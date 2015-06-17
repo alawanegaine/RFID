@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\I18n\Time;
 
 /**
  * Creneaux Controller
@@ -33,9 +34,7 @@ class CreneauxController extends AppController
      */
     public function view($id = null)
     {
-        $creneaux = $this->Creneaux->get($id, [
-            'contain' => []
-        ]);
+        $creneaux = $this->Creneaux->get($id)->contain(['groupes','Groupes.classes']);
         $this->set('creneaux', $creneaux);
         $this->set('_serialize', ['creneaux']);
     }
@@ -75,6 +74,7 @@ class CreneauxController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+            print_r($creneaux);
             $creneaux = $this->Creneaux->patchEntity($creneaux, $this->request->data);
             if ($this->Creneaux->save($creneaux)) {
                 $this->Flash->success(__('The creneaux has been saved.'));

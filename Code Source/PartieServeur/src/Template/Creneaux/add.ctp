@@ -12,12 +12,15 @@
             echo $this->Form->input('v_id_groupe',[
                 'label' => 'Groupe'
             ]);
-            echo $this->Form->input('d_date_emarg',[
+            echo $this->Form->input('d_date_debut',[
                 'label' => 'Date de début'
+            ]);
+            echo $this->Form->input('d_date_fin',[
+                'label' => 'Date de fin'
             ]);
             echo $this->Form->input('v_statut', [
                 'type' => 'hidden',
-                'value' => 's'
+                'value' => 't'
             ]);
         ?>
     </fieldset>

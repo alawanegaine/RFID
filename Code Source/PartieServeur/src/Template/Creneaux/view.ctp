@@ -11,18 +11,14 @@
     <h2><?= h($creneaux->v_id_creneau) ?></h2>
     <div class="row">
         <div class="large-5 columns strings">
-            <h6 class="subheader"><?= __('V Id Creneau') ?></h6>
-            <p><?= h($creneaux->v_id_creneau) ?></p>
-            <h6 class="subheader"><?= __('V Id Groupe') ?></h6>
+            <h6 class="subheader"><?= __('Promotion') ?></h6>
             <p><?= h($creneaux->v_id_groupe) ?></p>
-            <h6 class="subheader"><?= __('V Statut') ?></h6>
-            <p><?= h($creneaux->v_statut) ?></p>
         </div>
         <div class="large-2 columns dates end">
-            <h6 class="subheader"><?= __('D Date Emarg') ?></h6>
-            <p><?= h($creneaux->d_date_emarg) ?></p>
-            <h6 class="subheader"><?= __('D Date Synchro') ?></h6>
-            <p><?= h($creneaux->d_date_synchro) ?></p>
+            <h6 class="subheader"><?= __('Date de début') ?></h6>
+            <p><?= h($creneaux->d_date_debut) ?></p>
+            <h6 class="subheader"><?= __('Date de fin') ?></h6>
+            <p><?= h($creneaux->d_date_fin) ?></p>
         </div>
     </div>
 </div>

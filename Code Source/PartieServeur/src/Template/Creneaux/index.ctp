@@ -11,6 +11,7 @@
         <tr>
             <th><?= $this->Paginator->sort('Promotion') ?></th>
             <th><?= $this->Paginator->sort('Heure de début') ?></th>
+            <th><?= $this->Paginator->sort('Heure de fin') ?></th>
             <th class="actions"><?= __('Actions') ?></th>
         </tr>
     </thead>
@@ -18,7 +19,8 @@
     <?php foreach ($creneaux as $creneaux): ?>
         <tr>
             <td><?= $text = h($creneaux->groupe->classe->v_libelle) . '-' . h($creneaux->groupe->v_libelle) ?></td>
-            <td><?= h($creneaux->d_date_emarg) ?></td>
+            <td><?= h($creneaux->d_date_debut) ?></td>
+            <td><?= h($creneaux->d_date_fin) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $creneaux->v_id_creneau]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $creneaux->v_id_creneau]) ?>
