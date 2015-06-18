@@ -44,8 +44,9 @@ class EtudiantsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->allowEmpty('v_id_etu', 'create');
-            
+            //->allowEmpty('v_id_etu', 'create');
+            ->requirePresence('v_id_etu', 'create')
+            ->notEmpty('v_id_etu');
         $validator
             ->requirePresence('v_id_carte', 'create')
             ->notEmpty('v_id_carte');

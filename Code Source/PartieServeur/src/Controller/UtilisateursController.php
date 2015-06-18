@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
+use Cake\Network\Exception\NotFoundException;
 
 /**
  * Utilisateurs Controller
@@ -102,4 +104,29 @@ class UtilisateursController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    //add by kevin
+    public function beforeFilter(Event $event)
+{
+    parent::beforeFilter($event);
+    // Permet aux utilisateurs de s'enregistrer et de se déconnecter.
+    $this->Auth->allow(['add', 'logout']);
+}
+
+public function login()
+{
+    if ($this->request->is('post')) {
+        $utilisateurs = $this->Auth->identify();
+        if ($utilisateurs) {
+            $this->Auth->setUtilisateurs($utilisateurs);
+            return $this->redirect($this->Auth->redirectUrl(\App\Model\Entity\Absence::index.ctp));
+        }
+        $this->Flash->error(__("Nom d'utilisateur ou mot de passe incorrect, essayez à nouveau."));
+    }
+}
+
+public function logout()
+{
+    return $this->redirect($this->Auth->logout());
+}
 }

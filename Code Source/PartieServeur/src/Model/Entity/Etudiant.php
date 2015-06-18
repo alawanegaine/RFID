@@ -15,6 +15,7 @@ class Etudiant extends Entity
      * @var array
      */
     protected $_accessible = [
+        'v_id_etu'=> true,
         'v_id_carte' => true,
         'v_prenom' => true,
         'v_nom' => true,

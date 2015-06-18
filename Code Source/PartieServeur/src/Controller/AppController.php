@@ -15,6 +15,8 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+//add by kevin
+//use Cake\Event\Event;
 
 /**
  * Application Controller
@@ -34,11 +36,29 @@ class AppController extends Controller
      *
      * @return void
      */
-    public $helpers = ['Form', 'Html', 'Time'];
-    
+    public  $helpers = ['Form', 'Html', 'Time'];
+    public $request;
+
     public function initialize()
     {
-        parent::initialize();
+        //parent::initialize();
         $this->loadComponent('Flash');
+        //add by kevin
+        /*$this->loadComponent('Auth', [
+            'loginRedirect' => [
+                'controller' => 'Absences',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Pages',
+                'action' => 'display',
+                'home'
+            ]
+        ]);*/
     }
+    /*public function beforeFilter(Event $event)
+    {
+        $this->Auth->allow(['index', 'view', 'display']);
+    }*/
 }
+
