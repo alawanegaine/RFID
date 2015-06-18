@@ -1,1 +1,0 @@
-<a href="file://<?php echo '/User'; ?>"><?php echo '/User'; ?></a>
