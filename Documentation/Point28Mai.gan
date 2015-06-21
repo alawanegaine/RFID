@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-02-23" view-index="1" gantt-divider-location="382" resource-divider-location="300" version="2.7" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-03-02" view-index="0" gantt-divider-location="474" resource-divider-location="397" version="2.7" locale="fr">
     <description/>
     <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="59" order="0"/>
-        <field id="tpd4" name="Date de début" width="21" order="1"/>
-        <field id="tpd5" name="Date de fin" width="18" order="2"/>
+        <field id="tpd3" name="Nom" width="53" order="0"/>
+        <field id="tpd4" name="Date de début" width="24" order="1"/>
+        <field id="tpd5" name="Date de fin" width="22" order="2"/>
         <option id="color.recent"><![CDATA[#ff6600]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nom" width="65" order="0"/>
-        <field id="1" name="Rôle par défaut" width="34" order="1"/>
+        <field id="0" name="Nom" width="51" order="0"/>
+        <field id="1" name="Rôle par défaut" width="48" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -34,21 +34,22 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="74" name="Gestion de projet" meeting="false" start="2014-12-08" duration="140" complete="0" expand="true">
-            <task id="75" name="Développement lecture RFID" color="#8cb6ce" meeting="false" start="2015-06-08" duration="6" complete="0" expand="true"/>
-            <task id="76" name="Gestion de projet" color="#8cb6ce" meeting="false" start="2014-12-08" duration="140" complete="0" expand="true"/>
-            <task id="77" name="Développement app" meeting="false" start="2015-02-23" duration="1" complete="0" expand="true"/>
+        <task id="74" name="Gestion de projet" meeting="false" start="2015-02-16" duration="90" complete="26" expand="true">
+            <task id="75" name="Développement lecture RFID" color="#8cb6ce" meeting="false" start="2015-05-18" duration="20" complete="0" expand="true"/>
+            <task id="76" name="Gestion de projet" color="#8cb6ce" meeting="false" start="2015-02-16" duration="90" complete="32" expand="true"/>
             <task id="79" name="Rédaction document" color="#8cb6ce" meeting="false" start="2015-06-15" duration="5" complete="0" expand="true"/>
         </task>
         <task id="5" name="Boîtier" meeting="false" start="2015-03-02" duration="80" complete="0" expand="true">
-            <task id="0" name="Etude fonctionnelle" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true">
+            <task id="0" name="Etude fonctionnelle" meeting="false" start="2015-03-02" duration="15" complete="0" expand="false">
                 <task id="2" name="Choix composants" color="#8cb6ce" meeting="false" start="2015-03-02" duration="10" complete="0" expand="true"/>
                 <task id="1" name="Choix composants_réel" color="#009900" meeting="false" start="2015-03-02" duration="10" complete="0" expand="true"/>
                 <task id="3" name="Choix technologiques" color="#8cb6ce" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
                 <task id="4" name="Choix technologiques_réel" color="#009900" meeting="false" start="2015-03-16" duration="5" complete="0" expand="true"/>
             </task>
             <task id="23" name="Synchronisation données" color="#8cb6ce" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
-            <task id="24" name="Synchronisation données_réel" color="#009933" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true"/>
+            <task id="24" name="Synchronisation données_réel" color="#009933" meeting="false" start="2015-03-02" duration="15" complete="0" expand="true">
+                <depend id="7" type="2" difference="0" hardness="Strong"/>
+            </task>
             <task id="7" name="Développement soft" color="#8cb6ce" meeting="false" start="2015-03-23" duration="45" complete="0" expand="true"/>
             <task id="15" name="Développement soft_réel" color="#ff6600" meeting="false" start="2015-04-13" duration="50" complete="0" expand="true"/>
             <task id="8" name="Développement hard" color="#8cb6ce" meeting="false" start="2015-03-23" duration="45" complete="0" expand="true"/>
@@ -83,12 +84,14 @@
     <allocations>
         <allocation task-id="17" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="18" resource-id="0" function="Default:1" responsible="true" load="20.0"/>
-        <allocation task-id="75" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
-        <allocation task-id="76" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="75" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="76" resource-id="0" function="Default:1" responsible="true" load="60.0"/>
         <allocation task-id="79" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="7" resource-id="0" function="Default:1" responsible="false" load="40.0"/>
+        <allocation task-id="23" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
         <allocation task-id="19" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
-        <allocation task-id="20" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
-        <allocation task-id="21" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="20" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="21" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="60.0"/>
         <allocation task-id="49" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
         <allocation task-id="54" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
         <allocation task-id="19" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
@@ -118,9 +121,9 @@
         <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="214" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="79" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="68" visible="true"/>
+        <displaycolumn property-id="tpd3" order="0" width="250" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="114" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="104" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>

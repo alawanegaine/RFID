@@ -41,7 +41,7 @@ $cakeDescription = 'Emargement';
 <body class="home">
     <header>
         <div class="header-image">
-            <h1>Liste des absences</h1>
+            <h1>Projet RFID - Gestion Emargement</h1>
             <h1><?php echo $this->Html->link('GO ==>','/absences') ?></h1>
         </div>
     </header>

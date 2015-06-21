@@ -60,13 +60,13 @@ public class LectureRFID {
             Statement st = null;
             ResultSet rs = null;
 
-            String url = "jdbc:mysql://localhost:3306/maBase";
+            String url = "jdbc:mysql://localhost:3306/RFID";
             String user = "root";
-            String password = "password";
+            String password = "polytechdii";
 
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(url, user, password);
-            String query = "INSERT INTO Emargement(ID_Card) VALUES ('"+idCard+"') ;";
+            String query = "INSERT INTO emargementReel(v_id_carte) VALUES ('"+idCard+"') ;";
 
             PreparedStatement preparedStmt = conn.prepareStatement(query);
             preparedStmt.execute();
