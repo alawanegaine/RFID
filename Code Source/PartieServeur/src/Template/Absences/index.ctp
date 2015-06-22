@@ -6,7 +6,7 @@
         <li><?= $this->Html->link(__('Paramétrage'), ['controller' => 'Pages', 'action' => 'parametrage']) ?></li>
     </ul>
 </div>
-<!--<div class="absences index large-10 medium-9 columns">
+<div class="absences index large-10 medium-9 columns">
     <fieldset>
         <legend><?= __('Filtres') ?></legend>
         <?php 
