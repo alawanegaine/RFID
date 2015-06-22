@@ -29,10 +29,12 @@ class EtudiantsTable extends Table
             'foreignKey' => 'v_id_groupe',
             'propertyName' => 'groupe'
         ]);
-        $this->hasMany('absences', [
+        $this->hasMany(
+            'absences', [
             'foreignKey' => 'v_id_etu',
-            'propertyName' => 'absence'
-        ]);
+            'propertyName' => 'absence',
+            'dependent' => true,
+            ]);
     }
 
     /**

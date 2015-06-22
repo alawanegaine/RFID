@@ -111,7 +111,7 @@ class EtudiantsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $etudiant = $this->Etudiants->get($id);
-        if ($this->Etudiants->delete($etudiant)) {
+        if ($this->Etudiants->deleteAll($etudiant)) {
             $this->Flash->success(__('The etudiant has been deleted.'));
         } else {
             $this->Flash->error(__('The etudiant could not be deleted. Please, try again.'));

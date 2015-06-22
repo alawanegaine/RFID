@@ -3,9 +3,9 @@
     <ul class="side-nav">
         <li><?= $this->Html->link(__('Emploi du temps'), ['controller' => 'Creneaux','action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Gestion étudiant'), ['controller' => 'Etudiants','action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Paramétrage'), ['controller' => 'Pages', 'action' => 'parametrage']) ?></li>
     </ul>
 </div>
+<<<<<<< Updated upstream
 <div class="absences index large-10 medium-9 columns">
     <fieldset>
         <legend><?= __('Filtres') ?></legend>
@@ -19,6 +19,9 @@
     </fieldset>    
 </div>
 <!-- Filtres de la liste d'absences -->
+=======
+<!-- Filtres de la liste d'absences --> 
+>>>>>>> Stashed changes
 <div class="absences index large-10 medium-9 columns">
     <table cellpadding="0" cellspacing="0">
     <thead>
@@ -54,7 +57,6 @@
             </td>
             <td class="actions">
                 <?= $this->Html->link(__('Détail'), ['action' => '../etudiants/view', $absence->etudiant->v_id_etu]) ?>
-                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $absence->v_id_abs]) ?>
                 <?= $this->Form->postLink(__('Justifier'), ['action' => 'justifier', $absence->v_id_abs], ['confirm' => __('Etes-vous sûr de vouloir justifier l\'absence?')]) ?>
             </td>
         </tr>

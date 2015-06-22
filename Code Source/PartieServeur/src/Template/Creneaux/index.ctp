@@ -3,6 +3,7 @@
     <h3><?= __('Actions') ?></h3>
     <ul class="side-nav">
         <li><?= $this->Html->link(__('Nouveau Creneau libre'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Retour'), ['controller' => 'absences', 'action' => 'index']) ?></li>
     </ul>
 </div>
 <div class="creneaux index large-10 medium-9 columns">

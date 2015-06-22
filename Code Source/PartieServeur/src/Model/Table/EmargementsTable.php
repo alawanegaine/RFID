@@ -25,6 +25,11 @@ class EmargementsTable extends Table
         $this->table('emargements');
         $this->displayField('v_id_emarg');
         $this->primaryKey('v_id_emarg');
+        $this->belongsTo('etudiants', [
+            'foreignKey' => 'v_id_carte',
+            'propertyName' => 'etudiant',
+            'dependent' => true
+        ]);
     }
 
     /**

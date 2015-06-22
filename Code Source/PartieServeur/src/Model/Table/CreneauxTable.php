@@ -27,7 +27,8 @@ class CreneauxTable extends Table
         $this->primaryKey('v_id_creneau');
         $this->belongsTo('groupes', [
             'foreignKey' => 'v_id_groupe',
-            'propertyName' => 'groupe'
+            'propertyName' => 'groupe',
+            'dependent' => true
         ]);
     }
 

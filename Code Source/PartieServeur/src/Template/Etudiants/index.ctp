@@ -3,6 +3,8 @@
     <ul class="side-nav">
         <li><?= $this->Html->link(__('New Etudiant'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('Importer fichier de synchronisation des cartes étudiantes'), ['action' => 'importCsv']) ?></li>
+        <li><?= $this->Html->link(__('Retour'), ['controller' => 'absences', 'action' => 'index']) ?></li>
+
     </ul>
 </div>
 <div class="etudiants index large-10 medium-9 columns">
@@ -35,7 +37,6 @@
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $etudiant->v_id_etu]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $etudiant->v_id_etu]) ?>
-                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $etudiant->v_id_etu], ['confirm' => __('Are you sure you want to delete # {0}?', $etudiant->v_id_etu)]) ?>
             </td>
         </tr>
 
